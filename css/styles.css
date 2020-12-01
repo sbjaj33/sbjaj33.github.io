@@ -188,6 +188,35 @@ li{
   font-family: 'Sacramento', cursive;
   font-weight: bold;
 }
+
+
+
+.introwork {
+  border-right: solid 3px #05A8AA;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: auto;
+}
+
+/* Animation */
+.introwork {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 24rem;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: #05A8AA;}
+  to{border-right-color: transparent;}
+}
 @media (max-device-width: 1028px){
     .introname{
       font-size:9rem;
@@ -245,6 +274,10 @@ li{
     .cond{
       font-size:4.5rem;
     }
+    @keyframes animated-text{
+      from{width: 0;}
+      to{width: 34rem;}
+    }
 }
 @media (min-device-width: 768px) and (max-device-width: 1024px)
 {
@@ -295,5 +328,9 @@ li{
     }
     .cond{
       font-size:3rem;
+    }
+  @keyframes animated-text{
+      from{width: 0;}
+      to{width: 23rem;}
     }
 }
